@@ -1,0 +1,16 @@
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\obj\Debug\netcoreapp3.1\ShapeGeneratorProgram.csprojAssemblyReference.cache
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\obj\Debug\netcoreapp3.1\ShapeGeneratorProgram.AssemblyInfoInputs.cache
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\obj\Debug\netcoreapp3.1\ShapeGeneratorProgram.AssemblyInfo.cs
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\obj\Debug\netcoreapp3.1\ShapeGeneratorProgram.csproj.CoreCompileInputs.cache
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\bin\Debug\netcoreapp3.1\ShapeGeneratorProgram.exe
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\bin\Debug\netcoreapp3.1\ShapeGeneratorProgram.deps.json
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\bin\Debug\netcoreapp3.1\ShapeGeneratorProgram.runtimeconfig.json
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\bin\Debug\netcoreapp3.1\ShapeGeneratorProgram.runtimeconfig.dev.json
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\bin\Debug\netcoreapp3.1\ShapeGeneratorProgram.dll
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\bin\Debug\netcoreapp3.1\ShapeGeneratorProgram.pdb
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\bin\Debug\netcoreapp3.1\ShapeLibrary.dll
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\bin\Debug\netcoreapp3.1\ShapeLibrary.pdb
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\obj\Debug\netcoreapp3.1\ShapeGeneratorProgram.csproj.CopyComplete
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\obj\Debug\netcoreapp3.1\ShapeGeneratorProgram.dll
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\obj\Debug\netcoreapp3.1\ShapeGeneratorProgram.pdb
+C:\ITHS\C#\kursuppgifter\labUppgifter\progCSharp\lab2\Lab2\ShapeGeneratorProgram\obj\Debug\netcoreapp3.1\ShapeGeneratorProgram.genruntimeconfig.cache

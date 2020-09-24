@@ -2,73 +2,67 @@
 using ShapeLibrary;
 using System.Numerics;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 namespace ShapeGeneratorProgram
 {
     class Program
     {
-        //public static double RandomNumberGenerator()
-        //{
-        //    Random rndVectorNum = new Random();
-        //    return rndVectorNum.NextDouble() * 10;
-            
-        //}
+        
         static void Main(string[] args)
         {
-            /*Detta program skall skriva ut 20st random shapes med random
-             * värden. Samt de tre sammanfattningarna.
-             * 
+            /**
+                Detta program skriver ut 20st slumpade shapes med slumpade
+                värden. Dessa värden innefattar X, Y och Z position samt värden för längd, bredd, djup och radie.
+                Avslutningsvis skrivs summan av alla trianglars omkrets. Den genomsnittliga arean av alla shapes och
+                den shape3D med störst volym.
+
              */
-            //Random rndVectorNum = new Random();
-
-            //Console.WriteLine($"{RandomNumberGenerator():F1}");
 
 
-            //Vector2 circleVector2Input = new Vector2(rndVectorNum.Next(1, 6), rndVectorNum.Next(1, 6));
-            //Circle c1 = new Circle(circleVector2Input, rndVectorNum.Next(1, 6));
+            /**Test av output och formler för alla shapes
+             
+            Circle c1 = new Circle(new Vector2(2, 3), 2);
+            Console.WriteLine(c1);
+            Console.WriteLine($"Circumference: {c1.Circumference:F1}");
 
-            //Console.WriteLine(c1.ToString());
+            Console.WriteLine();
 
-            //Console.WriteLine(new Circle(new Vector2(3.0f, 4.0f), 2.0f));
+            Rectangle r1 = new Rectangle(new Vector2(2, 3), 5);
+            Console.WriteLine(r1);
+            Console.WriteLine($"Area: {r1.Area:F1}");
+            Console.WriteLine($"Circumference: {r1.Circumference:F1}");
 
-            //Console.WriteLine($"Area av c1 är {c1.Area}");
-            //Console.WriteLine($"Omkrets av c1 är {c1.Circumference}");
+            Console.WriteLine();
 
-            //Console.WriteLine("***REKTANGEL***");
-            //Vector2 rectangleVector2InputCenter = new Vector2(rndVectorNum.Next(1, 6), rndVectorNum.Next(1, 6));
-            //Vector2 rectangleVector2InputHeightWidth = new Vector2(rndVectorNum.Next(1, 6), rndVectorNum.Next(1, 6));
+            Triangle t1 = new Triangle(new Vector2(1, 2), new Vector2(3, 6), new Vector2(5, 2));
+            Console.WriteLine(t1);
+            Console.WriteLine($"Area: {t1.Area:F1}");
+            Console.WriteLine($"Circumference: {t1.Circumference:F1}");
 
-            //Rectangle r1 = new Rectangle(rectangleVector2InputCenter, rectangleVector2InputHeightWidth);
-            //Console.WriteLine(r1);
+            Console.WriteLine();
 
-            //Rectangle r2Square = new Rectangle(rectangleVector2InputCenter, 4.0f);
-            //Console.WriteLine(r2Square);
+            Cuboid cb1 = new Cuboid(new Vector3(1, 2, 3),new Vector3(2, 5, 7));
+            Console.WriteLine(cb1);
+            Console.WriteLine($"Volume: {cb1.Volume:F1}");
+            Console.WriteLine($"Area: {cb1.Area:F1}");
 
-            //Console.WriteLine("***CUBOID***");
-            //Console.WriteLine();
+            Console.WriteLine();
 
-            //Vector3 cuboidVector3InputCenter = new Vector3(rndVectorNum.Next(1, 6), rndVectorNum.Next(1, 6), rndVectorNum.Next(1, 6));
-            //Vector3 cuboidVector3InputSize = new Vector3(rndVectorNum.Next(1, 6), rndVectorNum.Next(1, 6), rndVectorNum.Next(1, 6));
+            Sphere s1 = new Sphere(new Vector3(1, 2, 3), 3);
+            Console.WriteLine(s1);
+            Console.WriteLine($"Area: {s1.Area:F1}");
+            Console.WriteLine($"Volume: {s1.Volume:F1}");
+            */
+            
+
+            /** Lista och uträkningar
+
+            float totalCircumferenceTriangle = 0.0f;
+            float avgAreaAllShapes = 0.0f;
+            int numberOfShapes = 0;
 
 
-            //Cuboid cuboid1 = new Cuboid(cuboidVector3InputCenter, cuboidVector3InputSize);
-            //Console.WriteLine(cuboid1);
-
-            //Console.WriteLine();
-
-            //Console.WriteLine("Testing lika hörn");
-            //Console.WriteLine(new Cuboid(new Vector3(1, 2, 3), 4.0f));
-
-            //Console.WriteLine("***SPHERE***");
-            //Sphere sp1 = new Sphere(cuboidVector3InputCenter, 2.0f);
-            //Console.WriteLine(sp1.Volume);
-
-            //Console.WriteLine("***TRIANGLE***");
-            //Console.WriteLine(new Triangle(new Vector2(0, 0), new Vector2(3, 3), new Vector2(6, 0)));
-            //Triangle tr1 = new Triangle(new Vector2(0, 0), new Vector2(3, 3), new Vector2(6, 0));
-            //Console.WriteLine(tr1.Circumference);
-
-            //Console.WriteLine(tr1.Area);
             List<Shape> shapes = new List<Shape>();
             
             for (int i = 0; i < 20; i++)
@@ -76,12 +70,31 @@ namespace ShapeGeneratorProgram
                 shapes.Add(Shape.GenerateShape());
             }
 
+            foreach (Shape triangle in shapes)
+            {
+                totalCircumferenceTriangle += triangle.;
+            }
+
+            foreach (Shape2D shape in shapes)
+            {
+                avgAreaAllShapes += shape.Area;
+
+            }
+
+
+            Console.WriteLine(numberOfShapes);
+            Console.WriteLine($"Total circumference for triangles: {totalCircumferenceTriangle:F1}");
+            Console.WriteLine($"Average area for all shapes: {avgAreaAllShapes:F1}");
+
+
             foreach (Shape shape in shapes)
             {
+
                 Console.WriteLine(shape);
                 Console.WriteLine();
             }
 
+            */
 
         }
     }

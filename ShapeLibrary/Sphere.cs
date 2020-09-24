@@ -20,6 +20,7 @@ namespace ShapeLibrary
             Radius = radius;
             Center = new Vector3(center.X, center.Y, center.Z);
             Volume = 4.0f / 3.0f * (float)(Math.PI) * (float)Math.Pow(radius, 3);
+            Area = 4.0f * (float)(Math.PI) * (float)Math.Pow(radius, 2);
         }
 
         public override string ToString()

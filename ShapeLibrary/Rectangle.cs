@@ -29,6 +29,7 @@ namespace ShapeLibrary
             Center = new Vector3(center, 0);
             Area = size.X * size.Y;
             Size = size;
+            Circumference = size.X * 2 + size.Y * 2;
         }
 
         public Rectangle(Vector2 center, float width)
@@ -36,6 +37,7 @@ namespace ShapeLibrary
             Center = new Vector3(center, 0);
             Area = width * width;
             Size = new Vector2(width, width);
+            Circumference = width * 4;
         }
         
         public override string ToString()

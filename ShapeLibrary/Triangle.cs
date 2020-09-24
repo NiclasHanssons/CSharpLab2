@@ -23,13 +23,13 @@ namespace ShapeLibrary
             Position2 = new Vector2(p2.X, p2.Y);
             Position3 = new Vector2(p3.X, p3.Y);
 
-            float ac = (float)Math.Sqrt((Math.Pow((p1.X - p2.X), 2) + Math.Pow((p1.Y - p2.Y), 2)));
-            float ba = (float)Math.Sqrt((Math.Pow((p1.X - p3.X), 2) + Math.Pow((p1.Y - p3.Y), 2)));
-            float bc = (float)Math.Sqrt((Math.Pow((p2.X - p3.X), 2) + Math.Pow((p2.Y - p3.Y), 2)));
+            float acSide = (float)Math.Sqrt((Math.Pow((p1.X - p2.X), 2) + Math.Pow((p1.Y - p2.Y), 2)));
+            float baSide = (float)Math.Sqrt((Math.Pow((p1.X - p3.X), 2) + Math.Pow((p1.Y - p3.Y), 2)));
+            float bcSide = (float)Math.Sqrt((Math.Pow((p2.X - p3.X), 2) + Math.Pow((p2.Y - p3.Y), 2)));
 
-            Circumference = ac + ba + bc;
+            Circumference = acSide + baSide + bcSide;
             
-            Area = (float)Math.Sqrt((Circumference / 2) * ((Circumference / 2) - ac) * ((Circumference / 2) - bc) * ((Circumference / 2) - ba));
+            Area = (float)Math.Sqrt((Circumference / 2) * ((Circumference / 2) - acSide) * ((Circumference / 2) - bcSide) * ((Circumference / 2) - baSide));
             
             Center = new Vector3((p1.X + p2.X + p3.X) / 3, (p1.Y + p2.Y + p3.Y) / 3, 0);
         }

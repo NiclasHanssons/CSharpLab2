@@ -37,13 +37,15 @@ namespace ShapeLibrary
         {
             Center = new Vector3(center.X, center.Y, center.Z);
             Volume = size.X * size.Y * size.Z;
+            Area = 2 * ((size.X * size.Y) + (size.Z * size.Y) + (size.X * size.Z)); 
             Size = size;
         }
 
         public Cuboid(Vector3 center, float width)
         {
             Center = new Vector3(center.X, center.Y, center.Z);
-            Area = width * width * width;
+            Area = (width * width) * 6;
+            Volume = width * width * width;
             Size = new Vector3(width, width, width);
         }
 

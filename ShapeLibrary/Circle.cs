@@ -18,11 +18,9 @@ namespace ShapeLibrary
         public Circle(Vector2 center, float radius)
         {
             Radius = radius;
-
             Center = new Vector3(center, 0);
             Circumference = (float)(2 * Math.PI * radius);
             Area = (float)(Math.PI * Math.Pow(radius, 2));
-
         }
 
         public override string ToString()

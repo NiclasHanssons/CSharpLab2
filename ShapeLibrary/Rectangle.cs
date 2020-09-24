@@ -16,7 +16,6 @@ namespace ShapeLibrary
 
         public Vector2 Size { get; }
 
-
         public bool IsSquare 
         {
             get
@@ -38,7 +37,6 @@ namespace ShapeLibrary
             Area = width * width;
             Size = new Vector2(width, width);
         }
-        
         
         public override string ToString()
         {

@@ -17,12 +17,14 @@ namespace ShapeLibrary
         public Vector2 Position2 { get; }
         public Vector2 Position3 { get; }
 
+        //Triangle tar 3st Vector2 med x och y värde för varje position
         public Triangle(Vector2 p1, Vector2 p2, Vector2 p3)
         {
             Position1 = new Vector2(p1.X, p1.Y);
             Position2 = new Vector2(p2.X, p2.Y);
             Position3 = new Vector2(p3.X, p3.Y);
 
+            //Räknar ut varje sida i triangle med pythagoras sats
             float acSide = (float)Math.Sqrt((Math.Pow((p1.X - p2.X), 2) + Math.Pow((p1.Y - p2.Y), 2)));
             float baSide = (float)Math.Sqrt((Math.Pow((p1.X - p3.X), 2) + Math.Pow((p1.Y - p3.Y), 2)));
             float bcSide = (float)Math.Sqrt((Math.Pow((p2.X - p3.X), 2) + Math.Pow((p2.Y - p3.Y), 2)));
@@ -31,8 +33,11 @@ namespace ShapeLibrary
             
             Area = (float)Math.Sqrt((Circumference / 2) * ((Circumference / 2) - acSide) * ((Circumference / 2) - bcSide) * ((Circumference / 2) - baSide));
             
+            //Räknar ut center genom medelvärdet på alla x och y positioner var för sig
             Center = new Vector3((p1.X + p2.X + p3.X) / 3, (p1.Y + p2.Y + p3.Y) / 3, 0);
         }
+
+        //Override ToString för att kunna skriva ut objektets värden och variablar
 
         public override string ToString()
         {

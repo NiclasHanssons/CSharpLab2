@@ -23,6 +23,8 @@ namespace ShapeLibrary
             Area = 4.0f * (float)(Math.PI) * (float)Math.Pow(radius, 2);
         }
 
+        //Override ToString för att kunna skriva ut objektets värden och variablar
+
         public override string ToString()
         {
             return $"sphere @({Center.X:F1}, {Center.Y:F1}, {Center.Z:F1}): r = {Radius:F1}";

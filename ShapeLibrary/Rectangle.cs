@@ -16,6 +16,7 @@ namespace ShapeLibrary
 
         public Vector2 Size { get; }
 
+        //Kontrollerar om shapen är en square, om inte är det en rectangle
         public bool IsSquare 
         {
             get
@@ -24,6 +25,7 @@ namespace ShapeLibrary
             } 
         }
 
+        //Rectangle då Vector2 tar size (x and y)
         public Rectangle(Vector2 center, Vector2 size)
         {
             Center = new Vector3(center, 0);
@@ -32,6 +34,7 @@ namespace ShapeLibrary
             Circumference = size.X * 2 + size.Y * 2;
         }
 
+        //Square då Vector2 tar endast en width
         public Rectangle(Vector2 center, float width)
         {
             Center = new Vector3(center, 0);
@@ -40,6 +43,7 @@ namespace ShapeLibrary
             Circumference = width * 4;
         }
         
+        //Override ToString för att kunna skriva ut objektets värden och variablar
         public override string ToString()
         {
             return $"rectangle @({Center.X:F1}, {Center.Y:F1}): w = {Size.X:F1}, h = {Size.Y:F1}, IsSquare: {IsSquare}";

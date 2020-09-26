@@ -14,6 +14,8 @@ namespace ShapeLibrary
 
         public override float Area { get; }
 
+        //Kontrollerar om shapen är en cube, om inte är det en cuboid
+
         public bool IsCube 
         {
             get 
@@ -32,7 +34,7 @@ namespace ShapeLibrary
 
         public Vector3 Size { get; }
        
-
+        //Cuboid då Vecotr3 tar size(x, y ,z)
         public Cuboid(Vector3 center, Vector3 size)
         {
             Center = new Vector3(center.X, center.Y, center.Z);
@@ -41,6 +43,7 @@ namespace ShapeLibrary
             Size = size;
         }
 
+        //Cube då Vector3 endast tar width som mått
         public Cuboid(Vector3 center, float width)
         {
             Center = new Vector3(center.X, center.Y, center.Z);
@@ -48,6 +51,8 @@ namespace ShapeLibrary
             Volume = width * width * width;
             Size = new Vector3(width, width, width);
         }
+
+        //Override ToString för att kunna skriva ut objektets värden och variablar
 
         public override string ToString()
         {

@@ -72,6 +72,7 @@ namespace ShapeLibrary
                 case 2:
                     return new Rectangle(new Vector2(center.X, center.Y), RandomNumberGenerator());
 
+                //Triangle with only 2 generated positions
                 case 3:
                     float p1x = RandomNumberGenerator();
                     float p2x = RandomNumberGenerator();

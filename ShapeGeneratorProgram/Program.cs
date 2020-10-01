@@ -1,28 +1,15 @@
-﻿using System;
-using ShapeLibrary;
-using System.Numerics;
+﻿using ShapeLibrary;
+using System;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using System.Globalization;
+using System.Numerics;
 
 namespace ShapeGeneratorProgram
 {
     class Program
     {
-        
-        static void Main(string[] args)
+        public static void RunShapeGeneratorProgram()
         {
-            /**
-                Detta program skriver ut 20st slumpade shapes med slumpade
-                värden. Dessa värden innefattar X, Y och Z position samt värden för längd, bredd, djup och radie.
-                Avslutningsvis skrivs summan av alla trianglars omkrets. Den genomsnittliga arean av alla shapes och
-                den shape3D med störst volym.
-
-             */
-
-            CultureInfo ci = new CultureInfo("us");
-            CultureInfo.DefaultThreadCurrentCulture = ci;
-
             float totalCircumferenceTriangle = 0.0f;
             float avgAreaAllShapes = 0.0f;
             float higestVolumeShape = 0.0f;
@@ -30,9 +17,10 @@ namespace ShapeGeneratorProgram
             //Skapar en lista och genererar 20st random shapes som sedan hanteras med foreach 
             //loopar för att skriva ut alla shapes, räkna ut circumference, area och volume.
             List<Shape> shapes = new List<Shape>();
-            
+
             for (int i = 0; i < 20; i++)
             {
+                //Possible to use Vector3 in method
                 shapes.Add(Shape.GenerateShape());
             }
 
@@ -55,7 +43,7 @@ namespace ShapeGeneratorProgram
             }
 
             //Sparar arean från alla shapes som delas med antalet shapes för att få avgArea
-            
+
             foreach (Shape shape in shapes)
             {
                 avgAreaAllShapes += shape.Area;
@@ -75,17 +63,39 @@ namespace ShapeGeneratorProgram
                 }
             }
 
-            
             Console.WriteLine();
             Console.WriteLine($"Total circumference for triangles: {totalCircumferenceTriangle:F1}");
             Console.WriteLine($"Average area for all shapes: {avgAreaAllShapes:F1}");
-            Console.WriteLine($"Shape with highest volume is: {higestVolumeShape:F1}");
+            Console.WriteLine($"Highest volume for a shape is: {higestVolumeShape:F1}");
+        }
 
-            
+        static void Main(string[] args)
+        {
+            /**
+                Detta program skriver ut 20st slumpade shapes med slumpade
+                värden. Dessa värden innefattar X, Y och Z position samt värden för längd, bredd, djup och radie.
+                Avslutningsvis skrivs summan av alla trianglars omkrets. Den genomsnittliga arean av alla shapes och
+                den shape3D med störst volym.
 
-            
+             */
 
+            //Justerar formateringen av (.) och (,)
+            CultureInfo ci = new CultureInfo("us");
+            CultureInfo.DefaultThreadCurrentCulture = ci;
 
+            RunShapeGeneratorProgram();
+            Console.WriteLine();
+
+            //Exempel inputs för att skriva ut punkterna i en triangel med IEnumerable och IEnumerator
+            Triangle t = new Triangle(Vector2.Zero, Vector2.One, new Vector2(2.0f, .5f));
+            int corner = 1;
+
+            Console.WriteLine("Positions for THE triangle.");
+            foreach (Vector2 v in t)
+            {
+                Console.WriteLine($"Corner {corner}: {v}");
+                corner++;
+            }
 
         }
     }

@@ -1,11 +1,16 @@
 # ShapeGenerator
+![image](https://user-images.githubusercontent.com/58398343/112659873-1fb12700-8e55-11eb-86f1-ca5989557fb1.png)
 
 ### Description
 
-This is a small application that takes any string input and then find patterns.
-The pattern it search for is where one sequence starts with a number and stops when the same number appears again.
-After this it highlights the sequence and calculate the summary of them.
-Any other charachters then numbers breaks the pattern and it continue to search on the next row.
+This application creates 20 random shapes with positions of it's corners in a grid system.
+It then calculates the width, height and length or sets a radius if it's a circle or sphere.
+For each of the shapes the application calculates the following.
+* Total circumference for trinagles
+* Average area for all shapes
+* Highest volume for a shape
+
+It also have a special calculation for a triangle which only gets 2 of 3 positions.
 
 ##### Setting up the project:
 * Start Visual Studio and press 'Clone a reoisitory' on the start page.
